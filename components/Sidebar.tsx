@@ -29,6 +29,8 @@ const style = {
   details: `flex-1`,
   handle: `text-[#8899a6] block`,
   moreContainer: `flex items-center mx-2`,
+  activeText: ` font-semibold`,
+  generalText: `font-regular`,
 };
 
 const homeIcon = <FontAwesomeIcon icon={faHouse} className="mx-5" inverse />;
@@ -86,7 +88,7 @@ const navItems = [
 ];
 
 const Sidebar = () => {
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<any | null>(null);
   return (
     <div className={style.wrapper}>
       <div>
@@ -95,8 +97,9 @@ const Sidebar = () => {
       <div className={style.navContainer}>
         {navItems.map((navItem) => (
           <div
-            className="w-min flex items-center rounded-[100px] py-4 pr-6 hover:bg-[#333c45] transition ease-linear cursor-pointer"
+            className={`${style.navItems} ${selected !== "More" && selected === navItem.name ? style.activeText : style.generalText}`}
             key={navItem.name}
+            onClick={() => setSelected(navItem.name)}
           >
             {navItem.icon} {navItem.name}
           </div>
