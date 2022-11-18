@@ -92,7 +92,7 @@ const Sidebar = () => {
   return (
     <div className={style.wrapper}>
       <div>
-        <Image src={logoUrja} alt="Urja Logo" height={105} width={115} />
+        <Image src={logoUrja} alt="Urja Logo" height={85} width={125} />
       </div>
       <div className={style.navContainer}>
         {navItems.map((navItem) => (

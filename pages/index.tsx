@@ -1,3 +1,5 @@
+import Head from "next/head";
+import Feed from "../components/home/Feed";
 import Sidebar from "../components/Sidebar";
 
 const style = {
@@ -8,9 +10,12 @@ const style = {
 export default function Home() {
   return (
     <div className={style.wrapper}>
+      <Head>
+        <title>Urja | A social platform to promote energy conservation</title>
+      </Head>
       <div className={style.content}>
         <Sidebar />
-        <h2>Feeds</h2>
+        <Feed />
         <h3>Widgets</h3>
       </div>
     </div>
