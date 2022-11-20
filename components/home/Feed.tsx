@@ -9,6 +9,57 @@ const style = {
   headerTitle: `text-xl font-bold`,
 };
 
+const posts = [
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+  {
+    displayName: "SkaleDev",
+    userName: "0x616225F50fA2b77F5e8e592468fa1cE37ba46a3a",
+    avatar: "/public/profilePic.jpg",
+    text: "gm",
+    isProfileImageNft: false,
+    timestamp: "2020-06-01T12:00:00.000Z",
+  },
+];
+
 const Feed = () => {
   return (
     <div className={style.wrapper}>
@@ -17,6 +68,7 @@ const Feed = () => {
         <FontAwesomeIcon icon={faStar} />
       </div>
       <PostBox />
+      {/* {posts.map} */}
     </div>
   );
 };

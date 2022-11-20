@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/SidebarOption.jsx", "components/SidebarOption.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/SidebarOption.jsx", "components/SidebarOption.jsx", "components/home/PostBox.jsx", "components/home/PostBox.jsx"],
   "exclude": ["node_modules"]
 }
