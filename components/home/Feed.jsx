@@ -2,6 +2,7 @@ import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import PostBox from "./PostBox";
+import Post from "../Post";
 
 const style = {
   wrapper: `flex-[2] border-r border-l border-[#38444d]`,
@@ -68,7 +69,16 @@ const Feed = () => {
         <FontAwesomeIcon icon={faStar} />
       </div>
       <PostBox />
-      {/* {posts.map} */}
+      {posts.map((post, index) => (
+        <Post
+          key={index}
+          displayName={post.displayName}
+          userName={post.userName}
+          avatar={post.avatar}
+          text={post.text}
+          isProfileImageNft={post.isProfileImageNft}
+        />
+      ))}
     </div>
   );
 };
