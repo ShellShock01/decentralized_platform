@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/SidebarOption.jsx", "components/SidebarOption.jsx", "components/home/PostBox.jsx", "components/home/PostBox.jsx", "components/home/Feed.jsx", "components/home/Feed.jsx", "components/Post.jsx", "components/Post.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/SidebarOption.jsx", "components/SidebarOption.jsx", "components/home/PostBox.jsx", "components/home/PostBox.jsx", "components/home/Feed.jsx", "components/home/Feed.jsx", "components/Post.jsx", "components/Post.jsx", "components/Sidebar.jsx", "components/Sidebar.jsx"],
   "exclude": ["node_modules"]
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -56,30 +57,37 @@ const navItems = [
   {
     name: "Home",
     icon: homeIcon,
+    redirectTo: "/",
   },
   {
     name: "Explore",
     icon: exploreIcon,
+    redirectTo: "/",
   },
   {
     name: "Notifications",
     icon: notificationsIcon,
+    redirectTo: "/",
   },
   {
     name: "Messages",
     icon: messagesIcon,
+    redirectTo: "/",
   },
   {
     name: "Bookmarks",
     icon: bookmarksIcon,
+    redirectTo: "/",
   },
   {
     name: "Lists",
     icon: listIcon,
+    redirectTo: "/",
   },
   {
     name: "Profile",
     icon: profileIcon,
+    redirectTo: "/profile",
   },
   {
     name: "More",
@@ -88,18 +96,27 @@ const navItems = [
 ];
 
 const Sidebar = () => {
-  const [selected, setSelected] = useState<any | null>(null);
+  const [selected, setSelected] = useState("");
+  const router = useRouter();
+
   return (
     <div className={style.wrapper}>
       <div>
         <Image src={logoUrja} alt="Urja Logo" height={85} width={125} />
       </div>
       <div className={style.navContainer}>
-        {navItems.map((navItem) => (
+        {navItems.map((navItem, index) => (
           <div
-            className={`${style.navItems} ${selected !== "More" && selected === navItem.name ? style.activeText : style.generalText}`}
-            key={navItem.name}
-            onClick={() => setSelected(navItem.name)}
+            className={`${style.navItems} ${
+              selected !== "More" && selected === navItem.name
+                ? style.activeText
+                : style.generalText
+            }`}
+            key={index}
+            onClick={() => {
+              setSelected(navItem.name);
+              router.push(navItem.redirectTo);
+            }}
           >
             {navItem.icon} {navItem.name}
           </div>
